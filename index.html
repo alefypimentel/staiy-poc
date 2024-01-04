@@ -18,14 +18,14 @@
         </video>
       </div>
 
-      <div id="tape">
+      <a href="./setup.html" id="tape">
         <video class="tape-hover" autoplay muted loop playsinline>
           <source src="./video/tape-hover.webm" type="video/webm" />
         </video>
         <video autoplay muted loop playsinline>
           <source src="./video/tape.webm" type="video/webm" />
         </video>
-      </div>
+      </a>
 
       <div id="monitor">
         <video autoplay muted loop playsinline>
@@ -44,7 +44,7 @@
       (function () {
         document.addEventListener("mousemove", parallax);
         const bg = document.querySelector(".bg-video");
-        const heart = document.querySelector("#heart video");
+        const heart = document.querySelector("#heart");
 
         function parallax(e) {
           let _mouseX = e.clientX - window.innerWidth / 2;

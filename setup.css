@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(./setup/background.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  backdrop-filter: blur(7px);
+}
+
+.wrapper {
+  background-image: url(./setup/background.jpeg);
+  padding-bottom: 56.25%;
+  position: relative;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.3s ease-in-out;
+}
+
+.wrapper img:hover {
+  filter: contrast(0.5);
+  cursor: pointer;
+}
+
+.radar {
+  position: absolute;
+  left: 47%;
+  top: -6px;
+  transform: translateX(-50%);
+  height: 18%;
+  width: 20%;
+}
+
+.monitor-left {
+  position: absolute;
+  left: 27%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 42%;
+  width: 20%;
+}
+
+.monitor-center {
+  position: absolute;
+  left: 49%;
+  top: 9%;
+  transform: translateX(-50%);
+  height: 28%;
+  width: 28%;
+}
+
+.monitor-right {
+  position: absolute;
+  right: 28%;
+  top: 14px;
+  transform: translateX(50%);
+  height: 42%;
+  width: 22%;
+}
+
+.teclado {
+  position: absolute;
+  left: 49%;
+  bottom: 45%;
+  transform: translateX(-50%);
+  height: 25%;
+  width: 21%;
+}
+
+.staiy {
+  position: absolute;
+  left: 49%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 60%;
+  width: 40%;
+  pointer-events: none;
+}
+
+.microfone {
+  position: absolute;
+  right: 7%;
+  bottom: 28%;
+  height: 25%;
+  width: 45%;
+}
+
+.mouse {
+  position: absolute;
+  right: 37%;
+  bottom: 50%;
+  height: 22%;
+  width: 8%;
+}
+
+.pads {
+  position: absolute;
+  right: 15.7%;
+  bottom: 47.8%;
+  height: 22%;
+  width: 22%;
+}
