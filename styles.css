@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -33,7 +34,6 @@ body {
 }
 
 #heart {
-  clip-path: url(#heart-path);
   height: 77%;
   left: 53%;
   position: absolute;
@@ -88,4 +88,36 @@ body {
 
 #tape:hover .tape-hover {
   opacity: 1;
+}
+
+.effect #heart {
+  animation: anime 3s linear;
+  animation-delay: 1s;
+}
+
+.effect #tape video,
+.effect #monitor video,
+.effect #machine video {
+  animation: fade 1.8s linear forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes anime {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: -200%;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }

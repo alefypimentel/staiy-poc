@@ -18,14 +18,14 @@
         </video>
       </div>
 
-      <a href="./setup.html" id="tape">
+      <div id="tape">
         <video class="tape-hover" autoplay muted loop playsinline>
           <source src="./video/tape-hover.webm" type="video/webm" />
         </video>
         <video autoplay muted loop playsinline>
           <source src="./video/tape.webm" type="video/webm" />
         </video>
-      </a>
+      </div>
 
       <div id="monitor">
         <video autoplay muted loop playsinline>
@@ -38,6 +38,10 @@
           <source src="./video/machine.webm" type="video/webm" />
         </video>
       </div>
+
+      <video id="effect" paused muted playsinline>
+        <source src="./video/effect.webm" type="video/webm" />
+      </video>
     </div>
 
     <script>
@@ -59,6 +63,27 @@
           heart.style.transform = "translateX(-" + (50 - _mouseX / 275) + "%)";
         }
       })();
+    </script>
+
+    <script>
+      document
+        .getElementById("tape")
+        .addEventListener("click", startSpiralAnimation);
+
+      const videoElement = document.getElementById("effect");
+
+      function startSpiralAnimation() {
+        document.body.classList.add("effect");
+        // Adicione a lógica da sua animação de espiral aqui
+        // Use CSS ou uma biblioteca como GSAP para animações avançadas
+
+        // Após a conclusão da animação, redirecione para setup.html
+        videoElement.play();
+
+        setTimeout(function () {
+          window.location.href = "setup.html";
+        }, 2200); // Tempo fictício, ajuste conforme necessário
+      }
     </script>
   </body>
 </html>
