@@ -1,0 +1,80 @@
+body {
+  background-color: #000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.bg > video {
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  width: 100%;
+}
+
+#heart video {
+  height: 77%;
+  left: 53%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+#tape video {
+  bottom: -11%;
+  cursor: pointer;
+  height: 60%;
+  position: absolute;
+  right: 0;
+  transition: 0.3s ease-in-out;
+  width: 30%;
+  z-index: 3;
+}
+
+.tape-hover {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+#monitor video {
+  cursor: pointer;
+  height: 20%;
+  left: 6%;
+  position: absolute;
+  top: 18%;
+  transition: 0.3s ease-in-out;
+  width: 20%;
+  z-index: 3;
+}
+
+#machine video {
+  bottom: 12%;
+  cursor: pointer;
+  height: 40%;
+  left: 0%;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  width: 30%;
+  z-index: 3;
+}
+
+#tape:hover video,
+#monitor:hover video,
+#machine:hover video {
+  transform: scale(1.05);
+}
+
+#tape:hover .tape-hover {
+  opacity: 1;
+}

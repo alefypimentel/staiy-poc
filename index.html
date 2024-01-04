@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Staiy</title>
+  </head>
+  <body>
+    <div class="bg">
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="./video/bg.webm" type="video/webm" />
+      </video>
+
+      <div id="heart">
+        <video autoplay loop muted playsinline>
+          <source src="./video/heart.webm" type="video/webm" />
+        </video>
+      </div>
+
+      <div id="tape">
+        <video class="tape-hover" autoplay muted loop playsinline>
+          <source src="./video/tape-hover.webm" type="video/webm" />
+        </video>
+        <video autoplay muted loop playsinline>
+          <source src="./video/tape.webm" type="video/webm" />
+        </video>
+      </div>
+
+      <div id="monitor">
+        <video autoplay muted loop playsinline>
+          <source src="./video/monitor.webm" type="video/webm" />
+        </video>
+      </div>
+
+      <div id="machine">
+        <video autoplay muted loop playsinline>
+          <source src="./video/machine.webm" type="video/webm" />
+        </video>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        document.addEventListener("mousemove", parallax);
+        const bg = document.querySelector(".bg-video");
+        const heart = document.querySelector("#heart video");
+
+        function parallax(e) {
+          let _mouseX = e.clientX - window.innerWidth / 2;
+          let _mouseY = e.clientY - window.innerHeight / 2;
+
+          bg.style.transform =
+            "translateX(" +
+            (0 - _mouseX / 1200) +
+            "%) translateY(" +
+            (0 - _mouseY / 1200) +
+            "%) scale(1.01)";
+          heart.style.transform = "translateX(-" + (50 - _mouseX / 375) + "%)";
+        }
+      })();
+    </script>
+  </body>
+</html>
